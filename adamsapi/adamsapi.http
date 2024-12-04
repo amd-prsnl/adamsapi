@@ -1,0 +1,6 @@
+@adamsapi_HostAddress = http://localhost:5022
+
+GET {{adamsapi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
