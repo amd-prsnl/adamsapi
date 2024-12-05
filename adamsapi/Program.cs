@@ -7,8 +7,21 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
+builder.Services.AddCors(options =>
+        {
+            options.AddPolicy(name: "MyCors", builder =>
+            {
+                //for when you're running on localhost
+                builder.AllowAnyOrigin()
+                .AllowAnyHeader().AllowAnyMethod();
+
+
+                //builder.WithOrigins("url from where you're trying to do the requests") this should be specified to get it working on other environments
+            });
+        });
 
 var app = builder.Build();
+app.UseCors("MyCors");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -18,7 +31,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.MapControllers();/*
 app.MapGet("/request", () =>
 {

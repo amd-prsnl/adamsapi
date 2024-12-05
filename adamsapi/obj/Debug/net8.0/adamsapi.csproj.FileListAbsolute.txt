@@ -258,3 +258,4 @@ C:\Users\blank\OneDrive\Documents\Visual Studio\Repos\adamsapi\adamsapi\obj\Debu
 C:\Users\blank\OneDrive\Documents\Visual Studio\Repos\adamsapi\adamsapi\obj\Debug\net8.0\adamsapi.pdb
 C:\Users\blank\OneDrive\Documents\Visual Studio\Repos\adamsapi\adamsapi\obj\Debug\net8.0\adamsapi.genruntimeconfig.cache
 C:\Users\blank\OneDrive\Documents\Visual Studio\Repos\adamsapi\adamsapi\obj\Debug\net8.0\ref\adamsapi.dll
+C:\Users\blank\OneDrive\Documents\Visual Studio\Repos\adamsapi\adamsapi\obj\Debug\net8.0\adamsapi.sourcelink.json
