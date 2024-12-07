@@ -111,6 +111,7 @@ public class RequestController : Controller {
             temp.StatusDescription = dr.GetString(1);
             statuses.Add(temp);
         }
+        connection.Close();
         return statuses;
     }
 
@@ -128,6 +129,48 @@ public class RequestController : Controller {
             temp.PriorityDescription = dr.GetString(1);
             priorities.Add(temp);
         }
+        connection.Close();
         return priorities;
+    }
+
+    [HttpGet]
+    [Route("user/")]
+    public List<User> Users() {
+        List<User> users = new List<User>();        
+        SqlConnection connection = new SqlConnection(Environment.GetEnvironmentVariable("ConnectionString"));
+        SqlCommand cmd = new SqlCommand("SELECT * from [user]", connection);
+        connection.Open();
+        SqlDataReader dr = cmd.ExecuteReader();
+        while (dr.Read()) {
+            User temp = new User();
+            temp.UserId = dr.GetInt32(0);
+            temp.UserName = dr.GetString(1);
+            users.Add(temp);
+        }
+        connection.Close();
+        return users;
+    }
+
+    [HttpGet]
+    [Route("request/{id}")]
+    public RequestResult Request(int id) {
+        SqlConnection connection = new SqlConnection(Environment.GetEnvironmentVariable("ConnectionString"));
+        SqlCommand cmd = new SqlCommand("SELECT * from request where request_id = " + id, connection);
+        connection.Open();
+        SqlDataReader dr = cmd.ExecuteReader();
+        dr.Read();
+
+        RequestResult temp = new RequestResult();
+        temp.RequestId = dr.GetInt32(0);
+        temp.RequestName = dr.GetString(1);
+        temp.Requestor = dr.GetString(2);
+        if (!dr.IsDBNull(3)) temp.Assigned = dr.GetInt32(3);
+        temp.ProblemDescription = dr.GetString(4);
+        temp.Priority = dr.GetInt32(5);
+        temp.Status = dr.GetInt32(6);
+        if (!dr.IsDBNull(7)) temp.DueDate = dr.GetDateTime(7);
+        temp.LastModifiedDate = dr.GetDateTime(8);
+        connection.Close();
+        return temp;
     }
 }

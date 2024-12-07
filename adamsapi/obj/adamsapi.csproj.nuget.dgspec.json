@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\blank\\OneDrive\\Documents\\Visual Studio\\Repos\\adamsapi\\adamsapi\\adamsapi.csproj": {}
+    "c:\\Users\\blank\\OneDrive\\Documents\\Visual Studio\\Repos\\adamsapi\\adamsapi\\adamsapi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\blank\\OneDrive\\Documents\\Visual Studio\\Repos\\adamsapi\\adamsapi\\adamsapi.csproj": {
+    "c:\\Users\\blank\\OneDrive\\Documents\\Visual Studio\\Repos\\adamsapi\\adamsapi\\adamsapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\blank\\OneDrive\\Documents\\Visual Studio\\Repos\\adamsapi\\adamsapi\\adamsapi.csproj",
+        "projectUniqueName": "c:\\Users\\blank\\OneDrive\\Documents\\Visual Studio\\Repos\\adamsapi\\adamsapi\\adamsapi.csproj",
         "projectName": "adamsapi",
-        "projectPath": "C:\\Users\\blank\\OneDrive\\Documents\\Visual Studio\\Repos\\adamsapi\\adamsapi\\adamsapi.csproj",
+        "projectPath": "c:\\Users\\blank\\OneDrive\\Documents\\Visual Studio\\Repos\\adamsapi\\adamsapi\\adamsapi.csproj",
         "packagesPath": "C:\\Users\\blank\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\blank\\OneDrive\\Documents\\Visual Studio\\Repos\\adamsapi\\adamsapi\\obj\\",
+        "outputPath": "c:\\Users\\blank\\OneDrive\\Documents\\Visual Studio\\Repos\\adamsapi\\adamsapi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\blank\\AppData\\Roaming\\NuGet\\NuGet.Config"

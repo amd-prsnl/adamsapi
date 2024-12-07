@@ -19,3 +19,8 @@ public class Priority {
     public int PriorityId { get; set; }
     public string PriorityDescription {get; set;}
 }
+
+public class User {
+    public int UserId {get; set;}
+    public string UserName {get; set;}
+}
